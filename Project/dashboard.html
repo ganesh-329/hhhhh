@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Lister Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="branding">
+      <i class="fa-solid fa-bolt"></i>
+      <span>Quick Lister</span>
+    </div>
+    <nav>
+      <button id="profileBtn" class="cta"><i class="fa-solid fa-user"></i> Profile</button>
+      <button id="logoutBtn" class="cta"><i class="fa-solid fa-sign-out"></i> Logout</button>
+    </nav>
+  </header>
+  <main class="dashboard-main">
+    <aside class="job-list-panel" id="jobListPanel">
+      <div class="job-list-header">
+        <h2>Jobs Nearby</h2>
+        <button id="postJobBtn" class="cta"><i class="fa-solid fa-plus"></i> Post Job</button>
+      </div>
+      <div class="job-filters" id="jobFilters"></div>
+      <ul class="job-list" id="jobList"></ul>
+    </aside>
+    <section class="map-section">
+      <div id="map" class="map-container" aria-label="Job Map"></div>
+    </section>
+    <div id="modalContainer"></div>
+    <div id="aiAssistant"></div>
+  </main>
+  <footer class="main-footer">
+    <span>&copy; 2024 Quick Lister. All rights reserved.</span>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/jobs.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html> 

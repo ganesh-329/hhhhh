@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Lister Profile</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="branding">
+      <i class="fa-solid fa-bolt"></i>
+      <span>Quick Lister</span>
+    </div>
+    <nav>
+      <button onclick="window.location.href='dashboard.html'" class="cta"><i class="fa-solid fa-map"></i> Dashboard</button>
+      <button onclick="window.location.href='index.html'" class="cta"><i class="fa-solid fa-sign-out"></i> Logout</button>
+    </nav>
+  </header>
+  <main class="profile-main">
+    <section class="profile-info">
+      <h2>User Profile</h2>
+      <div class="profile-details">
+        <div><b>Username:</b> johndoe</div>
+        <div><b>Email:</b> johndoe@email.com</div>
+        <div><b>Member since:</b> Jan 2024</div>
+        <button class="cta" id="editProfileBtn"><i class="fa-solid fa-pen"></i> Edit Profile</button>
+      </div>
+    </section>
+    <section class="profile-jobs">
+      <h3>Posted Jobs</h3>
+      <ul id="postedJobs"></ul>
+      <h3>Applied Jobs</h3>
+      <ul id="appliedJobs"></ul>
+    </section>
+    <div id="modalContainer"></div>
+  </main>
+  <footer class="main-footer">
+    <span>&copy; 2024 Quick Lister. All rights reserved.</span>
+  </footer>
+  <script src="js/profile.js"></script>
+</body>
+</html> 

@@ -1,0 +1,216 @@
+/* Dashboard Layout */
+.dashboard-main {
+  display: flex;
+  min-height: 65vh;
+  gap: 2rem;
+  padding: 2rem 1rem 1rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.map-section {
+  flex: 2 1 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 600px;
+}
+.map-container { 
+  width: 100%;
+  height: 60vh;
+  min-height: 350px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+.job-list-panel {
+  flex: 1 1 320px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.2rem 1rem 1rem 1rem;
+  min-width: 280px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.job-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.job-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.job-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  max-height: 50vh;
+}
+.job-list li {
+  background: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.job-list li:hover, .job-list li:focus {
+  background: #eaf2ff;
+}
+@media (max-width: 900px) {
+  .dashboard-main {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1rem 0.2rem;
+  }
+  .job-list-panel {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .map-section {
+    min-width: 0;
+  }
+}
+@media (max-width: 600px) {
+  .map-container {
+    height: 40vh;
+    min-height: 200px;
+  }
+  .job-list {
+    max-height: 30vh;
+  }
+}
+/* AI Assistant Styles */
+.ai-fab {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 2rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.ai-fab:hover, .ai-fab:focus {
+  background: var(--accent);
+  color: #222;
+}
+.ai-modal {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 2.5rem;
+  width: 320px;
+  max-width: 95vw;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  z-index: 1300;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: popIn 0.2s;
+}
+.ai-modal-header {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.ai-modal-header button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.ai-modal-body {
+  padding: 1rem;
+  height: 180px;
+  overflow-y: auto;
+  background: #f7f9fb;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ai-chat-form {
+  display: flex;
+  border-top: 1px solid #e0e0e0;
+  background: #fff;
+}
+.ai-chat-form input {
+  flex: 1;
+  border: none;
+  padding: 0.7em 1em;
+  font-size: 1rem;
+  border-radius: 0;
+  outline: none;
+}
+.ai-chat-form button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0 1em;
+  cursor: pointer;
+  border-radius: 0 0 8px 0;
+  transition: background 0.2s;
+}
+.ai-chat-form button:hover, .ai-chat-form button:focus {
+  background: var(--accent);
+  color: #222;
+}
+.ai-msg {
+  padding: 0.5em 0.8em;
+  border-radius: 8px;
+  max-width: 85%;
+  margin-bottom: 0.3em;
+  word-break: break-word;
+}
+.ai-msg.user {
+  background: #eaf2ff;
+  align-self: flex-end;
+}
+.ai-msg.ai {
+  background: #f0eaff;
+  align-self: flex-start;
+}
+@media (max-width: 600px) {
+  .ai-fab {
+    bottom: 1.2rem;
+    right: 1.2rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+  .ai-modal {
+    bottom: 3.5rem;
+    right: 1.2rem;
+    width: 98vw;
+    max-width: 98vw;
+  }
+} 
